@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		2C5B9160257B92FB007D9A0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B915F257B92FB007D9A0B /* AppDelegate.swift */; };
 		2C5B9162257B92FB007D9A0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B9161257B92FB007D9A0B /* SceneDelegate.swift */; };
-		2C5B9164257B92FB007D9A0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B9163257B92FB007D9A0B /* ViewController.swift */; };
-		2C5B9167257B92FB007D9A0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C5B9165257B92FB007D9A0B /* Main.storyboard */; };
+		2C5B9164257B92FB007D9A0B /* RepositoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B9163257B92FB007D9A0B /* RepositoryListViewController.swift */; };
+		2C5B9167257B92FB007D9A0B /* RepositoryListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C5B9165257B92FB007D9A0B /* RepositoryListViewController.storyboard */; };
 		2C5B9169257B92FD007D9A0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C5B9168257B92FD007D9A0B /* Assets.xcassets */; };
 		2C5B916C257B92FD007D9A0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C5B916A257B92FD007D9A0B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,8 +19,8 @@
 		2C5B915C257B92FB007D9A0B /* SearchGitHubRepository.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchGitHubRepository.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C5B915F257B92FB007D9A0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C5B9161257B92FB007D9A0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2C5B9163257B92FB007D9A0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2C5B9166257B92FB007D9A0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2C5B9163257B92FB007D9A0B /* RepositoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListViewController.swift; sourceTree = "<group>"; };
+		2C5B9166257B92FB007D9A0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RepositoryListViewController.storyboard; sourceTree = "<group>"; };
 		2C5B9168257B92FD007D9A0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C5B916B257B92FD007D9A0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C5B916D257B92FD007D9A0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,15 +56,71 @@
 		2C5B915E257B92FB007D9A0B /* SearchGitHubRepository */ = {
 			isa = PBXGroup;
 			children = (
-				2C5B915F257B92FB007D9A0B /* AppDelegate.swift */,
-				2C5B9161257B92FB007D9A0B /* SceneDelegate.swift */,
-				2C5B9163257B92FB007D9A0B /* ViewController.swift */,
-				2C5B9165257B92FB007D9A0B /* Main.storyboard */,
-				2C5B9168257B92FD007D9A0B /* Assets.xcassets */,
-				2C5B916A257B92FD007D9A0B /* LaunchScreen.storyboard */,
-				2C5B916D257B92FD007D9A0B /* Info.plist */,
+				2C5B917E257B96CD007D9A0B /* Resource */,
+				2C5B9179257B9684007D9A0B /* Classes */,
+				2C5B9177257B9634007D9A0B /* Suportting Files */,
 			);
 			path = SearchGitHubRepository;
+			sourceTree = "<group>";
+		};
+		2C5B9177257B9634007D9A0B /* Suportting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C5B9161257B92FB007D9A0B /* SceneDelegate.swift */,
+				2C5B916D257B92FD007D9A0B /* Info.plist */,
+			);
+			path = "Suportting Files";
+			sourceTree = "<group>";
+		};
+		2C5B9179257B9684007D9A0B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2C5B917D257B96C7007D9A0B /* API */,
+				2C5B917A257B9694007D9A0B /* AppDelegate */,
+				2C5B917B257B96A8007D9A0B /* View */,
+				2C5B917C257B96B5007D9A0B /* ViewController */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2C5B917A257B9694007D9A0B /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				2C5B915F257B92FB007D9A0B /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		2C5B917B257B96A8007D9A0B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C5B917C257B96B5007D9A0B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2C5B9163257B92FB007D9A0B /* RepositoryListViewController.swift */,
+				2C5B9165257B92FB007D9A0B /* RepositoryListViewController.storyboard */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2C5B917D257B96C7007D9A0B /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		2C5B917E257B96CD007D9A0B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				2C5B9168257B92FD007D9A0B /* Assets.xcassets */,
+				2C5B916A257B92FD007D9A0B /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +182,7 @@
 			files = (
 				2C5B916C257B92FD007D9A0B /* LaunchScreen.storyboard in Resources */,
 				2C5B9169257B92FD007D9A0B /* Assets.xcassets in Resources */,
-				2C5B9167257B92FB007D9A0B /* Main.storyboard in Resources */,
+				2C5B9167257B92FB007D9A0B /* RepositoryListViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C5B9164257B92FB007D9A0B /* ViewController.swift in Sources */,
+				2C5B9164257B92FB007D9A0B /* RepositoryListViewController.swift in Sources */,
 				2C5B9160257B92FB007D9A0B /* AppDelegate.swift in Sources */,
 				2C5B9162257B92FB007D9A0B /* SceneDelegate.swift in Sources */,
 			);
@@ -146,12 +202,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2C5B9165257B92FB007D9A0B /* Main.storyboard */ = {
+		2C5B9165257B92FB007D9A0B /* RepositoryListViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2C5B9166257B92FB007D9A0B /* Base */,
 			);
-			name = Main.storyboard;
+			name = RepositoryListViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		2C5B916A257B92FD007D9A0B /* LaunchScreen.storyboard */ = {
@@ -288,7 +344,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 67L53468FC;
-				INFOPLIST_FILE = SearchGitHubRepository/Info.plist;
+				INFOPLIST_FILE = "SearchGitHubRepository/Suportting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +352,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.gfc.SearchGitHubRepository;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,7 +363,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 67L53468FC;
-				INFOPLIST_FILE = SearchGitHubRepository/Info.plist;
+				INFOPLIST_FILE = "SearchGitHubRepository/Suportting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +371,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.gfc.SearchGitHubRepository;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
