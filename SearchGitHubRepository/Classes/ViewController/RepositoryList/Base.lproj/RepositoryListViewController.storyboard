@@ -23,25 +23,31 @@
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="RRF-SE-UCg">
                                 <rect key="frame" x="0.0" y="88" width="414" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="SQx-W6-j6i"/>
+                                    <constraint firstAttribute="height" constant="44" id="sW4-3F-TP4"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Q9F-bP-3Jg">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="39a-dg-Vaf" secondAttribute="bottom" id="2a9-Kj-fYh"/>
-                            <constraint firstItem="RRF-SE-UCg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4fl-wv-FBt"/>
-                            <constraint firstItem="RRF-SE-UCg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="PDc-qG-cPP"/>
-                            <constraint firstItem="39a-dg-Vaf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RFo-ev-aaV"/>
-                            <constraint firstItem="39a-dg-Vaf" firstAttribute="top" secondItem="RRF-SE-UCg" secondAttribute="bottom" id="d70-ir-qqh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="39a-dg-Vaf" secondAttribute="trailing" id="oRq-0r-5Fg"/>
-                            <constraint firstAttribute="trailing" secondItem="RRF-SE-UCg" secondAttribute="trailing" id="wnR-c0-OHI"/>
+                            <constraint firstItem="RRF-SE-UCg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7JX-9Y-pPs"/>
+                            <constraint firstItem="RRF-SE-UCg" firstAttribute="trailing" secondItem="39a-dg-Vaf" secondAttribute="trailing" id="7Zl-Yz-eeN"/>
+                            <constraint firstItem="RRF-SE-UCg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Aj5-Ql-48h"/>
+                            <constraint firstItem="RRF-SE-UCg" firstAttribute="leading" secondItem="39a-dg-Vaf" secondAttribute="leading" id="NDD-Ml-Cxs"/>
+                            <constraint firstItem="RRF-SE-UCg" firstAttribute="centerX" secondItem="Q9F-bP-3Jg" secondAttribute="centerX" id="RXs-RJ-09K"/>
+                            <constraint firstItem="39a-dg-Vaf" firstAttribute="top" secondItem="RRF-SE-UCg" secondAttribute="bottom" id="cyh-B5-9W1"/>
+                            <constraint firstItem="Q9F-bP-3Jg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hlP-1C-8g3"/>
+                            <constraint firstItem="RRF-SE-UCg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kUS-bo-wBf"/>
+                            <constraint firstItem="39a-dg-Vaf" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="uXb-qv-8bo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="duI-DE-Don"/>
                     <connections>
+                        <outlet property="indicator" destination="Q9F-bP-3Jg" id="bQ4-YQ-I4p"/>
                         <outlet property="searchBar" destination="RRF-SE-UCg" id="zfJ-HG-DwC"/>
                         <outlet property="tableView" destination="39a-dg-Vaf" id="5PK-QQ-8ia"/>
                     </connections>
