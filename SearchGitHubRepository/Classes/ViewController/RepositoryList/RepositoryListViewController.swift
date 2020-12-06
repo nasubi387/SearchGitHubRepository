@@ -8,7 +8,7 @@
 import UIKit
 
 class RepositoryListViewController: UIViewController {
-
+    
     var repositories = [Repository]() {
         didSet {
             DispatchQueue.main.async { [weak self] in
@@ -26,14 +26,32 @@ class RepositoryListViewController: UIViewController {
             tableView.register(RepositoryListCell.self)
         }
     }
+    @IBOutlet weak var searchBar: UISearchBar! {
+        didSet {
+            searchBar.delegate = self
+            searchBar.placeholder = "検索"
+        }
+    }
     
     // MARK:- LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchRepository(with: "APIKit")
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        updateTitle(with: "Search GitHub Repository")
+    }
+    
+    // MARK:- Action
+    
+    func updateTitle(with title: String) {
+        navigationItem.title = title
+    }
+    
     // MARK:- API
     
     func fetchRepository(with keyword: String) {
@@ -55,6 +73,7 @@ class RepositoryListViewController: UIViewController {
             }
             
             guard let data = data, error == nil else {
+                // ToDo: Error Handling
                 print(error?.localizedDescription ?? "")
                 return
             }
@@ -70,7 +89,6 @@ class RepositoryListViewController: UIViewController {
         // API実行
         task.resume()
     }
-
 }
 
 extension RepositoryListViewController: UITableViewDataSource {
@@ -92,5 +110,14 @@ extension RepositoryListViewController: UITableViewDataSource {
 extension RepositoryListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension RepositoryListViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let keyword = searchBar.text else {
+            return
+        }
+        fetchRepository(with: keyword)
     }
 }
